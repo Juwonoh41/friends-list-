@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="jumbotron jumbotron-fluid" id = "friends">
+  <h1 class="display-4">
+    <%= @friend.first_name %>
+    <%= @friend.last_name %>
+  </h1>
+  
+  <p class="lead">
+    <strong>Email:</strong>
+    <%= @friend.email %>
+  </p>
+  <p class="lead">
+    <strong>Phone:</strong>
+    <%= @friend.phone %>
+  </p>
+  <p class="lead">
+    <strong>LinkedIn:</strong>
+    <%= @friend.LinkedIn%>
+  </p>
+  
+  <hr class="my-4">
+  
+  <p class="lead">
+    
+    <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-secondary"%> 
+    <%= button_to "Destroy", @friend, method: :delete, class: "btn btn-secondary"%>
+  </p>
+</div>
+

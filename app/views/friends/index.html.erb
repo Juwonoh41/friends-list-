@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+
+<table class = "table table-hover table-striped table-bordered">
+  <thead class = "table-dark">
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">LinkedIn</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    
+
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @friends.each do |friend| %>
+    <%= render friend %>
+    
+  <% end %>
+  </tbody>
+  
+</table>
+
+
+<%= link_to "Add friend", new_friend_path, class: "btn btn-secondary"%>
